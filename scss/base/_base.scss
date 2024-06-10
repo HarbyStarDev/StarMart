@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  /**
+ * scrollbar style
+ */
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $white;
+    border-left: 1px solid $border-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border: 3px solid $white;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $title-color;
+  }
+  h2.main-title,
+  .product-title {
+    font-weight: $fw-600;
+  }
+  h2.main-title {
+    font-size: $fs-18;
+    padding-bottom: $fs-10;
+    @include border("bottom");
+    margin-bottom: $fs-30;
+  }
+  .product-title {
+    font-size: $fs-15;
+    text-transform: capitalize;
+  }
+  p {
+    color: $text-color;
+  }
+  a {
+    text-decoration: none;
+  }
+  .rate {
+    display: flex;
+    gap: 1px;
+    span {
+      color: $yellow;
+    }
+  }
+  .buy-icon {
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+  .scroll-to-top {
+    position: fixed;
+    bottom: -2.5rem;
+    right: 1.5rem;
+    z-index: 99;
+    cursor: pointer;
+    background-color: $primary;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: $fs-20;
+    color: $white;
+    transition: $transition;
+    @include flex-center;
+    border-radius: 50%;
+    &:hover {
+      background-color: $primary-dark;
+    }
+    &.show {
+      bottom: 3rem;
+      @include media("md") {
+        bottom: 6rem;
+      }
+    }
+  }
+
+  @include media("lg") {
+    %close-icon {
+      display: block;
+      text-align: end;
+      font-size: $fs-20;
+      margin-bottom: $fs-10;
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}

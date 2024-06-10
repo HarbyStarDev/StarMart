@@ -1,0 +1,136 @@
+footer {
+  background-color: $title-color;
+  .brands-directory {
+    border-bottom: 1px solid $title-color-alt;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: $fs-15;
+      * {
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: $fs-18;
+        color: $primary;
+      }
+      .cat {
+        display: flex;
+        gap: 3px $fs-20;
+        align-items: center;
+        flex-wrap: wrap;
+        h3 {
+          color: $gray;
+          font-size: $fs-14;
+          font-weight: $fw-600;
+        }
+        a {
+          display: block;
+          color: $text-color;
+          font-size: $fs-15;
+          transition: $transition;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            right: -10.5px;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background-color: $text-color;
+          }
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+  .footer-nav {
+    border-bottom: 1px solid $title-color-alt;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .boxes {
+      .box {
+        h2 {
+          color: $white;
+          font-size: 1rem;
+          padding-bottom: .5rem;
+          margin-bottom: 1rem;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 3.75rem;
+            background-color: $primary;
+          }
+        }
+        ul {
+          margin-bottom: 0;
+          li {
+            &:not(:last-child) {
+              margin-bottom: .5rem;
+            }
+            a {
+              font-size: $fs-15;
+              @include text-color-with-hover("primary");
+            }
+          }
+        }
+        .social {
+          > div {
+            display: flex;
+            gap: $fs-15;
+          }
+          span {
+            @include text-color-with-hover("primary");
+            cursor: pointer;
+            font-size: $fs-20;
+          }
+        }
+        &:nth-child(5) {
+            div {
+              display: flex;
+              gap: $fs-10;
+              span {
+                color: $text-color;
+              }
+              p,a {
+                font-size: $fs-15;
+                margin-bottom: 0;
+              }
+              a {
+                @include text-color-with-hover("primary");
+              }
+              &:not(:last-child) {
+                margin-bottom: .5rem;
+              }
+            }
+        }
+      }
+    }
+  }
+  .copyright {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    @include media ("lg") {
+      padding-bottom: 4rem;
+    }
+    p {
+      margin-top: $fs-15;
+      margin-bottom: 0;
+      font-size: $fs-14;
+      font-weight: $fw-500;
+      span {
+        color: $primary;
+        font-weight: $fw-700;
+        cursor: pointer;
+      }
+    }
+  }
+}

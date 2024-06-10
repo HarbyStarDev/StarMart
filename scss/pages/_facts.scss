@@ -1,0 +1,165 @@
+.facts {
+  margin-bottom: 3rem;
+  .container {
+    display: flex;
+    gap: $fs-30;
+  }
+  .testimonials {
+    width: calc(25% - $fs-15);
+    .item {
+      text-align: center;
+      padding: $fs-30 $fs-20;
+      @include border;
+      border-radius: $br-md;
+      img:first-of-type {
+        max-width: 5rem;
+        border-radius: 50%;
+        margin-bottom: $fs-20;
+      }
+      .name {
+        font-size: $fs-18;
+        color: $text-color;
+        font-weight: $fw-700;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      .job {
+        margin-bottom: $fs-15;
+        font-size: $fs-14;
+        color: $title-color-alt;
+      }
+      img:last-of-type {
+        width: $fs-25;
+        margin-bottom: $fs-10;
+
+      }
+      .text {
+        font-size: $fs-15;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        @include media("xl") {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          line-height: 1.6;
+        }
+        @include media ("lg") {
+          margin-left: 5rem;
+          margin-right: 5rem;
+        }
+        @include media ("xs") {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+
+    }
+  }
+  .banner {
+    width: calc(50% - $fs-30);
+    position: relative;
+    @include media ("lg") {
+      height: 25rem;
+    }
+    .image {
+      height: 100%;
+      background-image: url("../images/cta-banner.jpg");
+      background-size: cover;
+      border-radius: $br-md;
+    }
+    .info {
+      background-color: rgb(255, 255, 255, .7);
+      text-align: center;
+      border-radius: $br-sm;
+      padding: $fs-30;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      *{
+        margin-bottom: 0;
+      }
+      .discount {
+        font-size: $fs-14;
+        color: $white;
+        background-color: $title-color;
+        padding: 5px $fs-10;
+        font-weight: $fw-600;
+        border-radius: $br-sm;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h4 {
+        font-size: $fs-25;
+        font-weight: $fw-700;
+        color: $title-color-alt ;
+        line-height: 1.5;
+      }
+      p:last-child {
+        font-weight: $fw-700;
+      }
+    }
+  }
+  .our-services {
+    width: calc(25% - $fs-15);
+    .items {
+      padding: $fs-30 $fs-20;
+      @include border;
+      border-radius: $br-md;
+      display: flex;
+      flex-direction: column;
+      gap: $fs-15;
+      @include media ("lg") {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 0;
+      }
+      
+      .item {
+        display: flex;
+        align-items: center;
+        gap: $fs-15;
+        @include media ("lg") {
+          width: 50%;
+        }
+        @include media ("xs") {
+          width: 100%;
+        }
+        span {
+          font-size: $fs-30;
+          color: $primary;
+          transition: $transition;
+        }
+        .text {
+          h4 {
+            font-size: $fs-14;
+            color: $text-color;
+            font-weight: $fw-600;
+          }
+          p {
+            font-size: $fs-11;
+            margin-bottom: 0;
+          }
+        }
+        &:hover {
+          span {
+            color: $primary-dark;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    @include media("lg") {
+      flex-direction: column;
+      > div {
+        width: 100%;
+      }
+    }
+  }
+}

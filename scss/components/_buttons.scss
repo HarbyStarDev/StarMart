@@ -1,0 +1,17 @@
+
+.my-btn {
+  padding: .5rem 1.25rem;
+  border-radius: $br-sm;
+  outline: none;
+  border: none;
+  background-color: $primary;
+  color: $white;
+  text-transform: uppercase;
+  transition: $transition;
+  font-size: $fs-15;
+  font-weight: $fw-600;
+  
+  &:hover {
+    background-color: $primary-dark;
+  }
+}

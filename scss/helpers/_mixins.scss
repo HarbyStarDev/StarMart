@@ -1,0 +1,61 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border($direction: "all") {
+  @if $direction == "bottom" {
+    border-bottom: 1px solid $border-color;
+  } @else {
+    border: 1px solid $border-color;
+  }
+}
+
+@mixin text-color-with-hover($hover-color: "title") {
+  color: $text-color;
+  transition: $transition;
+  &:hover {
+    @if $hover-color == "title" {
+      color: $title-color;
+    } @else {
+      color: $primary;
+    }
+  }
+}
+
+@mixin media($size) {
+  @if $size == "xxl" {
+    @media (max-width: 1399px) {
+      @content;
+    }
+  } @else if $size == "xl" {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == "lg" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == "md" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == "sm" {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $size == "xs" {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
+
+@mixin shadow($ele: "box") {
+  @if $ele == "links" {
+    box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+  } @else {
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+  }
+}

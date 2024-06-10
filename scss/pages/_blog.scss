@@ -1,0 +1,38 @@
+.blog {
+  margin-bottom: 3rem;
+  .items {
+
+    .item {
+      .image {
+        margin-bottom: 20px;
+        img {
+          max-width: 100%;
+          border-radius: $br-md;
+          filter: grayscale(.3);
+          transition: $transition;
+        }
+      }
+      .info {
+        .cat {
+          font-size: $fs-14;
+          color: $primary;
+        }
+        .title {
+          h3 {
+            font-size: $fs-16;
+            margin-bottom: 5px;
+          }
+        }
+        P {
+          margin-bottom: 0;
+          font-size: $fs-14;
+        }
+      }
+      &:hover {
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}

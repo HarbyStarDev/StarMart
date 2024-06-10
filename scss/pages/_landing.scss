@@ -1,0 +1,92 @@
+.landing {
+  .container {
+    .box {
+      position: relative;
+      height: 28.125rem;
+      width: 100%;
+      overflow: hidden;
+      @include media("xl") {
+        height: 24.375rem;
+      }
+      @include media("md") {
+        height: 21.2rem;
+      }
+      .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        img {
+          border-radius: $br-md;
+          height: 100%;
+          width: 100%;
+          @include media("lg") {
+            height: 21.875rem;
+          }
+          @include media("md") {
+            height: 18.75rem;
+          }
+        }
+      }
+
+      .content {
+        position: absolute;
+        top: 7rem;
+        left: 6rem;
+        @include media("xl") {
+          top: calc(7rem - 2.2rem);
+        }
+        @include media("lg") {
+          top: 3rem;
+          left: 2rem;
+          padding: $fs-20;
+          background-color: rgba($color: $white, $alpha: .8);
+          border-radius: $br-md;
+          width: fit-content;
+        }
+        @include media("md") {
+          top: 2rem;
+          left: 1rem;
+        }
+        @include media("xs") {
+          top: 2rem;
+          text-align: center;
+        }
+        > *:not(:last-child) {
+          margin-bottom: $fs-10;
+        }
+        h3 {
+          color: $primary;
+        }
+        h1 {
+          font-weight: $fw-700;
+          letter-spacing: -1px;
+          width: 25rem;
+          line-height: 1;
+          @include media("lg") {
+            width: 19rem;
+            margin-bottom: 0 !important;
+          }
+          @include media("xs") {
+            max-width: 15rem;
+          }
+        }
+        p {
+          font-size: $fs-25;
+          font-weight: $fw-500;
+          span {
+            font-weight: $fw-700;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    span {
+      background-color: $primary-dark;
+      height: 0.75rem;
+      width: 0.75rem;
+    }
+  }
+}

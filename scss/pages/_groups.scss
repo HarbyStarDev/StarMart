@@ -1,0 +1,54 @@
+.groups {
+  .container {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .item {
+    display: flex;
+    gap: $fs-10;
+    border-radius: $br-md;
+    @include border;
+    padding: $fs-15;
+    .image {
+      padding: $fs-10;
+      background-color: $border-color;
+      border-radius: $br-sm;
+      img {
+        width: 1.875rem;
+      }
+    }
+    .info {
+      width: 100%;
+      position: relative;
+      h3 {
+        font-size: $fs-14;
+        font-weight: $fw-600;
+      }
+      span {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: $fs-11;
+        color: $text-color;
+      }
+      a {
+        color: $primary;
+        font-size: $fs-13;
+      }
+    }
+  }
+  .swiper-scrollbar {
+    background-color: rgba($color: $border-color, $alpha: .4);
+    .swiper-scrollbar-drag {
+      background: $border-color;
+    }
+    &:hover {
+      .swiper-scrollbar-drag {
+        background: #b3b3b3;
+      }
+    }
+  
+  }
+}
